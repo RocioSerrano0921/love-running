@@ -26,6 +26,21 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: baseline; /* Align items vertically */
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
 
 #menu {
@@ -40,19 +55,32 @@ header {
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
-header a {
-    text-decoration: none;
-    color: inherit;
+
+/* Navbar style with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none; /* Hidden by default, so I can show it when the checkbox is checked */
+    top: 100%; /* Position below the header: once is checked (look at the #nav-toggle:checked ~ nav) */
 }
 
-h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
+/* Nav toogle */
+#nav-toggle:checked ~ nav {
+    display: block; /* Show nav when toggle is checked */
+}
+#nav-toggle {
+    display: none; /* Hide the checkbox */
 }
 
-/* Main */
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+/* Main content */
 main {
     background-color: lightblue;
     /* Allows main to grow and fill the available space and push footer down*/
