@@ -92,3 +92,26 @@ main {
 footer {
     background-color: orange;
 }
+
+/* Media query: tablets and larger  (min-width:768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block; /* Show nav by default on larger screens */
+        position: relative; /* Relative positioning for larger screens */
+        box-shadow: none; /* Remove box shadow */
+        width: fit-content;
+        padding-right: 1rem;
+    }
+    #menu {
+        display: flex; /* Flexbox for horizontal layout */
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none; /* Hide the toggle label on larger screens */
+    }
+}
