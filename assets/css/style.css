@@ -192,6 +192,16 @@ hr {
 #times h3 {
     color: #fafafa;
 }
+
+/* Gallery page */
+#photos img {
+    width: 100%;
+    line-height: 1em; /*To ensure itheres plety space for the alt text in case an image path has an error */
+}
+
+#photos {
+    line-height: 0; /* Prevents gaps between images */
+}
 /* Footer */
 
 #social-networks {
