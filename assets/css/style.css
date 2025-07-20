@@ -218,6 +218,15 @@ hr {
     color: #3a3a3a;
 }
 
+/* Media query: large or landscape phones  (min-width: 576px and up) */
+@media screen and (min-width: 768px) {
+    /* Gallery page */
+    #photos {
+        column-count: 2; /* Two columns for larger phones */
+        column-gap: 0; /* No gap between columns */
+    }
+}
+
 /* Media query: tablets and larger  (min-width:768px and up) */
 @media screen and (min-width: 768px) {
     /* Header */
@@ -275,37 +284,46 @@ hr {
         text-align: end;
         align-self: flex-end;
     }
-}
 
-/* Large devices (laptops and desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-    /* links descendant of the menu */
-    #menu a:hover {
-        border-bottom: 1px solid #3a3a3a;
-    }
-}
-
-/* Largest devices  (laptops and desktops, 1200px and up*/
-@media screen and (min-width: 1200px) {
-    #benefits {
-        display: flex;
-        flex-direction: row; /* Change to row layout */
+    /* Gallery page */
+    #photos {
+        column-count: 3; /* Three columns for tablets and larger */
     }
 
-    #benefits > div {
-        flex: 1; /* Allow each benefit to take equal space */
-    }
-    #benefits-image {
-        order: 0;
+    /* Large devices (laptops and desktops, 992px and up) */
+    @media screen and (min-width: 992px) {
+        /* links descendant of the menu */
+        #menu a:hover {
+            border-bottom: 1px solid #3a3a3a;
+        }
+        /* Gallery page */
+        #photos {
+            column-count: 4; /* Four columns for tablets and larger */
+        }
     }
 
-    #benefits-mental {
-        order: 1; /* Move mental benefits to the end */
-    }
-    #benefits-mental > div {
-        align-self: flex-start; /* Align mental benefits to the start */
-    }
-    #benefits-physical {
-        align-self: flex-end;
+    /* Largest devices  (laptops and desktops, 1200px and up*/
+    @media screen and (min-width: 1200px) {
+        #benefits {
+            display: flex;
+            flex-direction: row; /* Change to row layout */
+        }
+
+        #benefits > div {
+            flex: 1; /* Allow each benefit to take equal space */
+        }
+        #benefits-image {
+            order: 0;
+        }
+
+        #benefits-mental {
+            order: 1; /* Move mental benefits to the end */
+        }
+        #benefits-mental > div {
+            align-self: flex-start; /* Align mental benefits to the start */
+        }
+        #benefits-physical {
+            align-self: flex-end;
+        }
     }
 }
